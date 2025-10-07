@@ -17,8 +17,7 @@ class VCREffect {
       miny2: 220,
       num: 70
     }, options);
-
-        this.init();
+    this.init();
   }
 
   init() {
@@ -28,7 +27,6 @@ class VCREffect {
     this.canvas.style.top = "0";
     this.canvas.style.left = "0";
     this.canvas.style.opacity = this.config.opacity;
-
     this.generateVCRNoise();
     window.addEventListener("resize", () => this.onResize());
   }
@@ -57,11 +55,9 @@ class VCREffect {
   renderTrackingNoise(radius = 2) {
     const { canvas, ctx, config } = this;
     let { miny, miny2, num } = config;
-
     canvas.style.filter = `blur(${config.blur}px)`;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.fillStyle = `#fff`;
-
     ctx.beginPath();
     for (let i = 0; i <= num; i++) {
       let x = Math.random() * canvas.width;
@@ -70,7 +66,6 @@ class VCREffect {
       ctx.fillRect(x, y1, radius, radius);
       ctx.fillRect(x, y2, radius, radius);
       ctx.fill();
-
       this.renderTail(ctx, x, y1, radius);
       this.renderTail(ctx, x, y2, radius);
     }
@@ -90,7 +85,7 @@ class VCREffect {
       ctx.fill();
     }
   }
-}
+}  /* of class VCREffect */
 
 // Usage
 const canvas = document.getElementById("canvas");
@@ -102,8 +97,7 @@ const vcrEffect = new VCREffect(canvas, {
   fps: 60,
   blur: 1
 });
-const videoIds = ["c4CVKbVtTsc", "143aXLat70E", "J5SSsT1O9gE", "dAiomIGB3qo", "lk6iJNSv-vY", 
-  "7PgJLyeb6sM", "wz0A7m1euy0", "IiR9uO0Ye1I"];
+const videoIds = ["c4CVKbVtTsc", "143aXLat70E", "J5SSsT1O9gE", "dAiomIGB3qo", "lk6iJNSv-vY", "7PgJLyeb6sM", "wz0A7m1euy0", "IiR9uO0Ye1I"];
 let currentVideoIndex = 0;
 const iframe = document.getElementById("ytplayer");
 const snowEffect = document.querySelector(".snow-effect");
@@ -112,11 +106,11 @@ function switchToNextVideo() {
   snowEffect.style.opacity = 1;
   setTimeout(() => {
     currentVideoIndex = (currentVideoIndex + 1) % videoIds.length;
-    iframe.src = `https://www.youtube.com/embed/${videoIds[currentVideoIndex]}?autoplay=1&controls=0&loop=1&mute=1`;
+    iframe.src = `https://www.youtube.com/embed/${videoIds[currentVideoIndex]}?autoplay=1&controls=0&loop=1&mute=0`;
     snowEffect.style.opacity = 0;
   }, 2000); // 2 seconds of static before switching
 }
 
 iframe.addEventListener("load", () => {
-  setTimeout(switchToNextVideo, 25000); 
+  setTimeout(switchToNextVideo, 20000); 
 });
