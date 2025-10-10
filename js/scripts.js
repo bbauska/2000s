@@ -97,7 +97,7 @@ const vcrEffect = new VCREffect(canvas, {
   fps: 60,
   blur: 1
 });
-const videoIds = ["c4CVKbVtTsc", "143aXLat70E", "J5SSsT1O9gE", "dAiomIGB3qo", "lk6iJNSv-vY", "7PgJLyeb6sM", "wz0A7m1euy0", "IiR9uO0Ye1I"];
+const videoIds = ["J5SSsT1O9gE", "c4CVKbVtTsc", "143aXLat70E", "dAiomIGB3qo", "lk6iJNSv-vY", "7PgJLyeb6sM", "wz0A7m1euy0", "IiR9uO0Ye1I"];
 let currentVideoIndex = 0;
 const iframe = document.getElementById("ytplayer");
 const snowEffect = document.querySelector(".snow-effect");
