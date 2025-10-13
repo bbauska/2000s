@@ -113,5 +113,5 @@ function switchToNextVideo() {
 }
 
 iframe.addEventListener("load", () => {
-  setTimeout(switchToNextVideo, 10000); 
+  setTimeout(switchToNextVideo, 9000); 
 });
