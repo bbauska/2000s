@@ -97,7 +97,20 @@ const vcrEffect = new VCREffect(canvas, {
   fps: 60,
   blur: 1
 });
-const videoIds = ["J5SSsT1O9gE", "c4CVKbVtTsc", "143aXLat70E", "dAiomIGB3qo", "lk6iJNSv-vY", "7PgJLyeb6sM", "wz0A7m1euy0", "IiR9uO0Ye1I"];
+<!--
+https://youtu.be/sPQx_Idiztw arrested development
+https://youtu.be/CKLor3gpaPo the sopranos
+https://youtu.be/PCYlt6OozSM the daily show
+https://youtu.be/ErL5R4fv_uc 30 rock
+https://youtu.be/S8p22rtNMoM south park
+https://youtu.be/t6GOZjSFRiE the west wing
+https://youtu.be/9Zp8UlxyjQ4 the office
+https://youtu.be/1i8dvWKrsMM doctor who
+https://youtu.be/7uTAIpU0sa0?list=RD7uTAIpU0sa0 band of brothers
+https://youtu.be/E3gYi-KvKug six feet under
+https://youtu.be/uDcQbk78CSw the wire
+-->
+const videoIds = ["sPQx_Idiztw", "CKLor3gpaPo", "PCYlt6OozSM", "ErL5R4fv_uc", "S8p22rtNMoM", "t6GOZjSFRiE", "9Zp8UlxyjQ4", "1i8dvWKrsMM","7uTAIpU0sa0","E3gYi-KvKug","uDcQbk78CSw"];
 let currentVideoIndex = 0;
 const iframe = document.getElementById("ytplayer");
 const snowEffect = document.querySelector(".snow-effect");
