@@ -98,7 +98,21 @@ const vcrEffect = new VCREffect(canvas, {
   blur: 1
 });
 
-const videoIds = ["CKLor3gpaPo", "PCYlt6OozSM", "ErL5R4fv_uc", "S8p22rtNMoM", "t6GOZjSFRiE", "9Zp8UlxyjQ4", "1i8dvWKrsMM","7uTAIpU0sa0","E3gYi-KvKug","uDcQbk78CSw"];
+/*
+https://youtu.be/sPQx_Idiztw arrested development (2003-2019)
+https://youtu.be/CKLor3gpaPo the sopranos (1/1/1999-6/10/2007)
+https://youtu.be/PCYlt6OozSM the daily show (1/11/1999-present)
+https://youtu.be/ErL5R4fv_uc 30 rock (2006-2013)
+https://youtu.be/S8p22rtNMoM south park (1997-present)
+https://youtu.be/t6GOZjSFRiE the west wing (9/22/1999-5/14/2006)
+https://youtu.be/9Zp8UlxyjQ4 the office (3/24/05-2013)
+https://youtu.be/1i8dvWKrsMM doctor who (2005-present)
+https://youtu.be/7uTAIpU0sa0 band of brothers (2001)
+https://youtu.be/E3gYi-KvKug six feet under (2001-2005)
+https://youtu.be/uDcQbk78CSw the wire (2002-2008)
+*/
+
+const videoIds = ["sPQx_Idiztw", "CKLor3gpaPo", "PCYlt6OozSM", "ErL5R4fv_uc", "S8p22rtNMoM", "t6GOZjSFRiE", "9Zp8UlxyjQ4", "1i8dvWKrsMM","7uTAIpU0sa0","E3gYi-KvKug","uDcQbk78CSw"];
 let currentVideoIndex = 0;
 const iframe = document.getElementById("ytplayer");
 const snowEffect = document.querySelector(".snow-effect");
