@@ -121,11 +121,11 @@ function switchToNextVideo() {
   snowEffect.style.opacity = 1;
   setTimeout(() => {
     currentVideoIndex = (currentVideoIndex + 1) % videoIds.length;
-    iframe.src = `https://www.youtube.com/embed/${videoIds[currentVideoIndex]}?autoplay=1&controls=0&loop=1&mute=1`;
+    iframe.src = `https://www.youtube.com/embed/${videoIds[currentVideoIndex]}?autoplay=1&controls=0&mute=1`;
     snowEffect.style.opacity = 0;
   }, 2000); // 2 seconds of static before switching
 }
 
 iframe.addEventListener("load", () => {
-  setTimeout(switchToNextVideo, 19000); 
+  setTimeout(switchToNextVideo, 10000); 
 });
