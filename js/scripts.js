@@ -97,6 +97,7 @@ const vcrEffect = new VCREffect(canvas, {
   fps: 60,
   blur: 1
 });
+
 /** 2000's nostalgia videos;
  1. https://youtu.be/sPQx_Idiztw = arrested development (2003-2019)
  2. https://youtu.be/CKLor3gpaPo = the sopranos (1/1/1999-6/10/2007)
@@ -110,6 +111,7 @@ const vcrEffect = new VCREffect(canvas, {
 10. https://youtu.be/E3gYi-KvKug = six feet under (2001-2005)
 11. https://youtu.be/uDcQbk78CSw = the wire (2002-2008)
 **/
+
 const videoIds = ["sPQx_Idiztw", "CKLor3gpaPo", "PCYlt6OozSM", "ErL5R4fv_uc", "S8p22rtNMoM", "t6GOZjSFRiE", 
                   "9Zp8UlxyjQ4", "1i8dvWKrsMM","7uTAIpU0sa0","E3gYi-KvKug","uDcQbk78CSw"];
 let currentVideoIndex = 0;
