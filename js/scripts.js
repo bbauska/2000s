@@ -126,7 +126,7 @@ function switchToNextVideo() {
     snowEffect.style.opacity = 0;
   }, 3000);  /* 3 seconds of static before switching */
 }
-https://youtu.be/
+
 iframe.addEventListener("load", () => {
   setTimeout(switchToNextVideo, 17000);  /* 17 seconds of video play */
 });
