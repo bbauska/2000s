@@ -124,9 +124,9 @@ function switchToNextVideo() {
     currentVideoIndex = (currentVideoIndex + 1) % videoIds.length;
     iframe.src = `https://www.youtube.com/embed/${videoIds[currentVideoIndex]}?autoplay=1&controls=0&loop=1&mute=1`;
     snowEffect.style.opacity = 0;
-  }, 2000); // 2 seconds of static before switching
+  }, 3000);  /* 3 seconds of static before switching */
 }
 
 iframe.addEventListener("load", () => {
-  setTimeout(switchToNextVideo, 17000);  /* 17 seconds */
+  setTimeout(switchToNextVideo, 17000);  /* 17 seconds of video play */
 });
