@@ -61,15 +61,17 @@
 <div class="tv-screen"></div>
 <div class="tv-container">
   <canvas id="canvas"></canvas>
-  <iframe width="720" height="540"
-    src="https://www.youtube.com/embed/ErL5R4fv_uc?autoplay=1&controls=0&loop=1&mute=1" 
-    title="YouTube video nostalgia from several sitcoms of the 2000's decade." allow="fullscreen; 
-	accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+  <iframe id="ytplayer" width="540" height="720" 
+    src="https://www.youtube.com/embed/t6GOZjSFRiE?autoplay=1&controls=0&loop=1&mute=1" 
+    aria-label="YouTube television series videos of the 2000s" 
+    title="YouTube television series videos of the 2000s" 
+    allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen>
+  </iframe>
   <div class="glitch"></div>
   <div class="scan-lines"></div>
   <div class="snow-effect"></div>
 </div>
-<script async src="/js/scripts.js"></script>
+<script defer src="/js/scripts.js"></script>
 
 <!-- 
 2000's nostalgia videos;
