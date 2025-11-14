@@ -19,7 +19,6 @@ class VCREffect {
     }, options);
     this.init();
   }
-
   init() {
     this.canvas.width = window.innerWidth;
     this.canvas.height = window.innerHeight;
@@ -30,12 +29,10 @@ class VCREffect {
     this.generateVCRNoise();
     window.addEventListener("resize", () => this.onResize());
   }
-
   onResize() {
     this.canvas.width = window.innerWidth;
     this.canvas.height = window.innerHeight;
   }
-
   generateVCRNoise() {
     if (this.config.fps >= 60) {
       cancelAnimationFrame(this.vcrInterval);
@@ -51,7 +48,6 @@ class VCREffect {
       }, 1000 / this.config.fps);
     }
   }
-
   renderTrackingNoise(radius = 2) {
     const { canvas, ctx, config } = this;
     let { miny, miny2, num } = config;
@@ -71,12 +67,10 @@ class VCREffect {
     }
     ctx.closePath();
   }
-
   renderTail(ctx, x, y, radius) {
     const n = getRandomInt(1, 50);
     const dirs = [1, -1];
     let dir = dirs[Math.floor(Math.random() * dirs.length)];
-
     for (let i = 0; i < n; i++) {
       let r = getRandomInt(radius - 0.01, radius);
       let dx = getRandomInt(1, 4) * dir;
@@ -98,20 +92,6 @@ const vcrEffect = new VCREffect(canvas, {
   blur: 1
 });
 
-/** 2000's nostalgia videos;
- 1. https://youtu.be/sPQx_Idiztw = arrested development (2003-2019)
- 2. https://youtu.be/CKLor3gpaPo = the sopranos (1/1/1999-6/10/2007)
- 3. https://youtu.be/PCYlt6OozSM = the daily show (1/11/1999-present)
- 4. https://youtu.be/ErL5R4fv_uc = 30 rock (2006-2013)
- 5. https://youtu.be/S8p22rtNMoM = south park (1997-present)
- 6. https://youtu.be/t6GOZjSFRiE = the west wing (9/22/1999-5/14/2006)
- 7. https://youtu.be/9Zp8UlxyjQ4 = the office (3/24/05-2013)
- 8. https://youtu.be/1i8dvWKrsMM = doctor who (2005-present)
- 9. https://youtu.be/7uTAIpU0sa0 = band of brothers (2001)
-10. https://youtu.be/E3gYi-KvKug = six feet under (2001-2005)
-11. https://youtu.be/uDcQbk78CSw = the wire (2002-2008)
-**/
-
 const videoIds = ["sPQx_Idiztw", "CKLor3gpaPo", "PCYlt6OozSM", "ErL5R4fv_uc", "S8p22rtNMoM", "t6GOZjSFRiE", 
                   "9Zp8UlxyjQ4", "1i8dvWKrsMM","7uTAIpU0sa0","E3gYi-KvKug","uDcQbk78CSw"];
 let currentVideoIndex = 0;
@@ -130,3 +110,17 @@ function switchToNextVideo() {
 iframe.addEventListener("load", () => {
   setTimeout(switchToNextVideo, 17000);  /* 17 seconds of video play */
 });
+
+/** 2000's nostalgia videos;
+ 1. https://youtu.be/sPQx_Idiztw = arrested development (2003-2019)
+ 2. https://youtu.be/CKLor3gpaPo = the sopranos (1/1/1999-6/10/2007)
+ 3. https://youtu.be/PCYlt6OozSM = the daily show (1/11/1999-present)
+ 4. https://youtu.be/ErL5R4fv_uc = 30 rock (2006-2013)
+ 5. https://youtu.be/S8p22rtNMoM = south park (1997-present)
+ 6. https://youtu.be/t6GOZjSFRiE = the west wing (9/22/1999-5/14/2006)
+ 7. https://youtu.be/9Zp8UlxyjQ4 = the office (3/24/05-2013)
+ 8. https://youtu.be/1i8dvWKrsMM = doctor who (2005-present)
+ 9. https://youtu.be/7uTAIpU0sa0 = band of brothers (2001)
+10. https://youtu.be/E3gYi-KvKug = six feet under (2001-2005)
+11. https://youtu.be/uDcQbk78CSw = the wire (2002-2008)
+**/
