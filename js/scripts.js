@@ -92,7 +92,7 @@ const vcrEffect = new VCREffect(canvas, {
   blur: 1
 });
 
-const videoIds = ["sPQx_Idiztw", "CKLor3gpaPo", "PCYlt6OozSM", "ErL5R4fv_uc", "S8p22rtNMoM", "t6GOZjSFRiE", 
+const videoIds = ["sPQx_Idiztw", "CKLor3gpaPo", "PCYlt6OozSM", "ErL5R4fv_uc", "S8p22rtNMoM", 
                   "9Zp8UlxyjQ4", "1i8dvWKrsMM","7uTAIpU0sa0","E3gYi-KvKug","uDcQbk78CSw"];
 let currentVideoIndex = 0;
 const iframe = document.getElementById("ytplayer");
@@ -117,7 +117,7 @@ iframe.addEventListener("load", () => {
  3. https://youtu.be/PCYlt6OozSM = the daily show (1/11/1999-present)
  4. https://youtu.be/ErL5R4fv_uc = 30 rock (2006-2013)
  5. https://youtu.be/S8p22rtNMoM = south park (1997-present)
- 6. https://youtu.be/t6GOZjSFRiE = the west wing (9/22/1999-5/14/2006)
+ 6. https://youtu.be/t6GOZjSFRiE = the west wing (9/22/1999-5/14/2006) - NOT AVAILABLE
  7. https://youtu.be/9Zp8UlxyjQ4 = the office (3/24/05-2013)
  8. https://youtu.be/1i8dvWKrsMM = doctor who (2005-present)
  9. https://youtu.be/7uTAIpU0sa0 = band of brothers (2001)
